@@ -20,3 +20,16 @@ $(".icon_menu").on("click",function(){
 $(".icon_logout").on("click",function(){
     $("#logoutModal").modal("show");
 })
+
+$(".btn_logout").on("click",function(){
+    $.ajax({
+        type:"get",
+        url:"/employee/employeeLogout",
+        success:function(info){
+            if(info.success) {
+                location.href = "login.html";
+              }
+        }
+    })
+})
+

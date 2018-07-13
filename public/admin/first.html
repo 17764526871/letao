@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>商品管理</title>
+  <title>主页</title>
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
@@ -13,20 +13,19 @@
 </head>
 
 <body>
-
+  <!-- 侧边栏 -->
   <div class="lt_aside">
-
-    <div class="brand">
-      <a href="index.html">黑马23期</a>
+    <div class="title">
+      <a href="index.html">管理员页面</a>
     </div>
     <div class="user">
-      <img src="images/default.jpg" alt="">
-      <p>超级管理员</p>
+      <img src="./images/default.jpg" alt="">
+      <p>吃个大煎饼</p>
     </div>
     <div class="nav">
       <ul>
         <li>
-          <a  href="user.html">
+          <a href="user.html">
             <span class="glyphicon glyphicon-user"></span>
             <span>用户管理</span>
           </a>
@@ -36,21 +35,21 @@
             <span class="glyphicon glyphicon-list"></span>
             <span>分类管理</span>
           </a>
-          <div class="second" style="display: none;">
-            <a href="first.html">一级分类</a>
+          <div class="second" style="display: none">
+            <a class="active" href="first.html">一级分类</a>
             <a href="second.html">二级分类</a>
           </div>
         </li>
         <li>
-          <a class="active" href="product.html">
+          <a href="product.html">
             <span class="glyphicon glyphicon-tags"></span>
             <span>商品管理</span>
           </a>
         </li>
       </ul>
     </div>
-
   </div>
+
   <div class="lt_main">
     <div class="lt_header">
       <a href="javascript:;" class="pull-left icon_menu">
@@ -65,18 +64,18 @@
       <!-- 面包屑导航 -->
       <ol class="breadcrumb">
         <li>
-          <a href="#">系统管理</a>
+          <a href="#">分类管理</a>
         </li>
-        <li class="active">商品管理</li>
+        <li class="active">一级分类管理</li>
       </ol>
-
-
-      <!-- 每个页面具体的内容 -->
-      <div class="lt_content"></div>
+      <!-- 页面内容 -->
+      <div class="lt_content">
+        
+      </div>
     </div>
   </div>
 
-  <!-- bootstrap中， role aria  sr-only: 盲人设备 -->
+  <!-- 模态框 -->
   <div class="modal fade" tabindex="-1" id="logoutModal">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -97,18 +96,19 @@
           <button type="button" class="btn btn-primary btn_logout">退出</button>
         </div>
       </div>
-      <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
   </div>
-  <!-- /.modal -->
+
+
+
+
 
   <script src="lib/jquery/jquery.js"></script>
   <script src="lib/bootstrap/js/bootstrap.js"></script>
   <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
   <script src="lib/nprogress/nprogress.js"></script>
+  <script src="lib/echarts/echarts.min.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/login.js"></script>
 
 </body>
 
