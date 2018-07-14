@@ -77,7 +77,7 @@ $(function () {
 
     //点击重置按钮
     $(".reset").on("click",function(){
-        $("form").data('bootstrapValidator').validator.resetForm(true)
+        $("form").data('bootstrapValidator').resetForm(true)
     })
    
 })

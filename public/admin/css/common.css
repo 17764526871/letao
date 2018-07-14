@@ -5,6 +5,9 @@
 .mt_150 {
     margin-top: 150px;
 }
+.mb_20 {
+    margin-bottom: 20px;
+}
 /* 清除a的下滑线样式 */
 a:link,
 a:visited,
@@ -107,4 +110,10 @@ ul,ol {
 .charts_right {
   width: 45%;
   height: 400px;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
 }
