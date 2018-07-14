@@ -134,36 +134,47 @@
                 <form>
                     <div class="modal-body">
                         <!-- 一级分类 -->
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                <span class="dropdown-text">请选择一级分类</span>
-                                <span class="caret"></span>
-                            </button>
-                            <input type="hidden" name="categoryId">
-                            <input type="hidden" name="hot" value="0">
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                    <span class="dropdown-text">请选择一级分类</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <input type="hidden" name="categoryId" id="categoryId">
+                                <input type="hidden" name="hot" value="0">
 
-                            <ul class="dropdown-menu" >
-                                <li><a href="">1</a></li>    
-                            </ul>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="">1</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 二级分类名称 -->
+                        <div class="form-group">
+                            <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类的名称">
+                        </div>
+
+                        <!-- 上传图片 -->
+                        <div class="form-group">
+                            <label for="fileupload" class="btn btn-default">上传图片</label>
+                            <input type="file" name="pic1" data-url="/category/addSecondCategoryPic" id="fileupload" style="display: none;">
+                        </div>
+
+                        <!-- 图片显示 -->
+                        <div class="form-group">
+                            <div class="img_box">
+                                <img src="images/none.png" width="100" height="100" alt="">
+                            </div>
+                            <input type="hidden" name="brandLogo">
                         </div>
                     </div>
-                    <!-- 二级分类名称 -->
-                    <div class="form-group">
-                        <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类的名称">
-                    </div>
 
-                    <!-- 上传图片 -->
-                    <div class="form-group">
-                        
-                    </div>
-
-                    <!-- 图片显示 -->
-                    <div class="form-group"></div>
 
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary ">添加</button>
+                        <button type="submit" class="btn btn-primary ">添加</button>
                     </div>
                 </form>
 
@@ -196,6 +207,13 @@
                 <img src="{{v.brandLogo?v.brandLogo:'images/none.png'}}" width="50" height="50">
             </td>
         </tr>
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+        {{each rows v i }}
+        <li>
+            <a data-id="{{v.id}}" href="#">{{v.categoryName}}</a>
+        </li>
         {{/each}}
     </script>
 </body>
