@@ -1,6 +1,6 @@
 $(function () {
     var page = 1;
-    var pageSize = 5;
+    var pageSize = 10;
     render();
     //添加分类
     $(".btn_add").on("click", function () {

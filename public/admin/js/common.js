@@ -1,4 +1,5 @@
 //页面加载进度条
+
 $(document).ajaxStart(function () {
     NProgress.start();
   });
@@ -13,6 +14,7 @@ $(".second").prev().on("click",function(){
 $(".icon_menu").on("click",function(){
     $(".lt_aside").toggleClass("active");
     $("body").toggleClass("active")
+    $(".lt_header").toggleClass("active")
 })
 
 //退出功能
