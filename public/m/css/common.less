@@ -1,0 +1,88 @@
+html,body{
+    height: 100%;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+.lt_container {
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ position: relative;
+ background-color: #fff;
+ min-width: 320px;
+ max-width:640px;
+ padding-top: 45px;
+ padding-bottom: 55px;
+
+}
+// 头部
+.lt_header{
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    background-color: #068;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding: 0 15px;
+
+
+    .icon_left {
+        float: left;
+    }
+    .icon_right {
+        float: right;
+    }
+    >h4 {
+        display: inline-block;
+        color: #fff;
+        font-weight: normal;
+    }
+    >a {
+        color: #fff;
+    }
+}
+
+.lt_footer {
+    height: 55px;
+    width: 100%;
+    background-color: #068;
+    position: absolute;
+    bottom: 0;
+
+    li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        padding-top: 8px;
+        a{
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+
+        &.active {
+            a {
+                color: darkorange;
+              }
+            
+              p {
+                color: darkorange;
+              }
+        }
+    }
+}
+.lt_main {
+width: 100%;
+  height: 100%;
+  position: relative;
+}
