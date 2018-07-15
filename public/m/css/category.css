@@ -1,0 +1,44 @@
+.category_left {
+  float: left;
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+.category_left li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: pink;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+}
+.category_left li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.category_left li.active {
+  background: #fff;
+  border-right: none;
+}
+.category_right {
+  float: left;
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+.category_right li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.category_right li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.category_right li p {
+  height: 20px;
+  line-height: 20px;
+}
