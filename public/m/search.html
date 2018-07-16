@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>乐淘商城-分类页</title>
+    <title>乐淘商城-搜索页</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/search.css">
 
 </head>
 
@@ -29,34 +29,18 @@
 
         <!-- 主体部分 -->
         <div class="lt_main">
-            <!-- 左边部分 -->
-            <div class="category_left">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <ul>
-                            <li class="active">
-                                <a href="javascript:;">运动鞋</a>
-                            </li>
-                        </ul>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="lt_search">
+                        <input type="text" placeholder="请输入搜索关键字">
+                        <button class='mui-btn  mui-btn-primary'>搜索</button>
+                    </div>
+                    <div class="lt_history">
+
                     </div>
                 </div>
             </div>
-            <!-- 右边部分 -->
-            <div class="category_right">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <img src="images/brand1.png" alt="">
-                                    <p>耐克</p>
-                                </a>
-                            </li>
-              
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
         </div>
 
 
@@ -74,7 +58,7 @@
                         <p>首页</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="category.html">
                         <span class="fa fa-bars"></span>
                         <p>分类页</p>
@@ -102,27 +86,33 @@
     <script src="lib/zepto/zepto.min.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/categoty.js"></script>
+    <script src="js/search.js"></script>
     <script type="text/html" id="tpl">
-        {{each rows v i}}
-        <li data-id="{{v.id}}" class="{{i==0?'active':''}}">
-            <a href="javascript:;">{{v.categoryName}}</a>
-        </li>
-        {{/each}}
-    </script>
-    <script type="text/html" id="tpl2">
-        {{if rows.length===0}}
-        <p>当前页面中没有更多数据</p>
+        {{if list.length==0}}
+        <p>没有历史记录</p>
         {{/if}}
-        {{each rows v i}}
-        <li>
-            <a href="#">
-                <img src="{{v.brandLogo}}" alt="">
-                <p>{{v.brandName}}</p>
-            </a>
-        </li>
-        {{/each}}
+        {{if list.length>0}}
+        <div class="title mui-clearfix">
+            <span class="mui-pull-left">搜索历史</span>
+            <span class="mui-pull-right btn_empty">
+                <i class="fa fa-trash "></i>
+                清空历史
+            </span>
+        </div>
+        <div class="content">
+            <ul>
+                {{each list v i}}
+                <li>
+                    <a href="searchList.html?key={{v}}">{{v}}</a>
+                    <span data-index='{{i}}' class='btn_delete mui-icon mui-icon-closeempty mui-pull-right btn_delete'></span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+
     </script>
+
 </body>
 
 </html>
