@@ -79,3 +79,20 @@ img {
   height: 100%;
   position: relative;
 }
+.product {
+  padding: 10px;
+}
+.product .product_item {
+  padding: 10px;
+  float: left;
+  width: 48%;
+  text-align: center;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+.product .product_item:nth-child(even) {
+  margin-left: 4%;
+}
+.product .product_item .price {
+  color: red;
+}
